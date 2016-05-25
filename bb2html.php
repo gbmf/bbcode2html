@@ -111,9 +111,8 @@
 				'<li>\$1</li>\$2',\$str[1]))).'</ol></ul>');"), $tmpText);
 			$tmpText = preg_replace('#<ul></li>(.*)</ul>(<li>|</ul>)#isU', '<ul>$1</ul></li>$2', $tmpText); // Validitäts-Korrektur
 		}
-	return $tmpText;
-	}
 		
-	echo bbc2html($content);
+	return nl2br($tmpText, true);
+	}
 
 ?>
